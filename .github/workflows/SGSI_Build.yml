@@ -68,7 +68,7 @@ jobs:
       - name: Build Aonly Devices
         if: "${{ steps.config.outputs.build_type == 'a-only' }}"
         run: |
-          sudo bash $GITHUB_WORKSPACE/SGSI-build-tool/make.sh --a-only "${{ steps.config.outputs.os_type }}" "${{ steps.config.outputs.zip_name }}" --fix-bug     
+          sudo bash $GITHUB_WORKSPACE/SGSI-build-tool/make.sh --a-only "${{ steps.config.outputs.os_type }}" "${{ steps.config.outputs.zip_name }}" --fix-bug
 
       - name: Repack Output File
         run: |
